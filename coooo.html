@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cart with Order Message</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="bg-light">
+
+<!-- Navbar -->
+<nav class="navbar navbar-light bg-white shadow-sm px-3">
+  <a class="navbar-brand fw-bold">My Shop</a>
+  <button class="btn btn-outline-primary position-relative" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+    🛒 Cart
+    <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+  </button>
+</nav>
+
+<!-- Product Cards -->
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm">
+        <img src="https://via.placeholder.com/300x200" class="card-img-top">
+        <div class="card-body text-center">
+          <h5>Product 1</h5>
+          <p>$15.00</p>
+          <button class="btn btn-primary add-to-cart" data-name="Product 1" data-price="15">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm">
+        <img src="https://via.placeholder.com/300x200" class="card-img-top">
+        <div class="card-body text-center">
+          <h5>Product 2</h5>
+          <p>$25.00</p>
+          <button class="btn btn-primary add-to-cart" data-name="Product 2" data-price="25">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Cart Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas">
+  <div class="offcanvas-header">
+    <h5>🛒 Your Cart</h5>
+    <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body" id="cart-items">
+    <p class="text-muted">Your cart is empty.</p>
+  </div>
+  <div class="offcanvas-footer p-3 border-top">
+    <h5 id="total-price" class="text-center mb-3">Total: $0.00</h5>
+    <button class="btn btn-success w-100" id="checkout-btn">Order Now</button>
+  </div>
+</div>
+
+<!-- Order Placed Modal -->
+<div class="modal fade" id="orderPlacedModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+      <h4 class="text-success">✅ Order Placed!</h4>
+      <p>Thank you for your purchase.</p>
+      <button class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+let cart = [];
+
+document.querySelectorAll('.add-to-cart').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const name = btn.dataset.name;
+    const price = parseFloat(btn.dataset.price);
+    const item = cart.find(p => p.name === name);
+    if (item) item.qty++;
+    else cart.push({ name, price, qty: 1 });
+    updateCart();
+  });
+});
+
+function updateCart() {
+  const items = document.getElementById('cart-items');
+  const count = document.getElementById('cart-count');
+  const total = document.getElementById('total-price');
+  count.textContent = cart.reduce((a, i) => a + i.qty, 0);
+
+  if (!cart.length) {
+    items.innerHTML = '<p class="text-muted">Your cart is empty.</p>';
+    total.textContent = 'Total: $0.00';
+    return;
+  }
+
+  let totalAmt = 0;
+  items.innerHTML = cart.map(i => {
+    totalAmt += i.price * i.qty;
+    return `
+      <div class="card mb-2 shadow-sm">
+        <div class="card-body d-flex justify-content-between align-items-center">
+          <div>
+            <h6>${i.name}</h6>
+            <small>$${i.price.toFixed(2)} × ${i.qty}</small>
+          </div>
+          <div class="btn-group btn-group-sm">
+            <button class="btn btn-outline-secondary" onclick="changeQty('${i.name}', -1)">-</button>
+            <button class="btn btn-outline-secondary" disabled>${i.qty}</button>
+            <button class="btn btn-outline-secondary" onclick="changeQty('${i.name}', 1)">+</button>
+          </div>
+        </div>
+      </div>`;
+  }).join('');
+  total.textContent = `Total: $${totalAmt.toFixed(2)}`;
+}
+
+function changeQty(name, delta) {
+  const item = cart.find(p => p.name === name);
+  if (!item) return;
+  item.qty += delta;
+  if (item.qty <= 0) cart = cart.filter(p => p.name !== name);
+  updateCart();
+}
+
+document.getElementById('checkout-btn').addEventListener('click', () => {
+  if (!cart.length) return;
+  cart = [];
+  updateCart();
+  const modal = new bootstrap.Modal(document.getElementById('orderPlacedModal'));
+  modal.show();
+});
+</script>
+
+</body>
+</html>
+
+
+
+<div class="card-container">
+  <div class="card blue">
+    <img src="serums.jpg" alt="Products">
+        <img style="width: 130px; margin-top: -130px; border-radius:50%; margin-left:-190px; height:120px;" src="small.jpeg" alt="">
+    <span style="margin-top:-100px; margin-left:100px; font-size:30px;">Products <br> Under 499</span>
+  </div>
+  <div class="card purple">
+    <img src="serumss.jpeg" alt="Offer">
+        <img style="width: 130px; margin-top: -130px; border-radius:50%; margin-left:-190px; height:120px;" src="off.png" alt="">
+    <span style="margin-top:-100px; margin-left:180px; font-size:30px;">Flat 40% Offer</span>
+  </div>
+  <div class="card green">
+    <img src="serumsss.jpeg" alt="Gen Z Favourites">
+        <img style="width: 130px; margin-top: -130px; border-radius:50%; margin-left:-190px; height:120px;" src="se.webp" alt="">
+    <span style="margin-top:-100px; margin-left:100px; font-size:30px;">Gen Z <br> Favourites</span>
+  </div>
+  <div class="card orange">
+    <img src="serumssss.jpeg" alt="Combos">
+        <img style="width: 130px; margin-top: -130px; border-radius:50%; margin-left:-190px; height:120px;" src="com.png" alt="">
+    <span style="margin-top:-100px; margin-left:100px; font-size:30px;">Combos <br> Under 999</span>
+  </div>
+</div><pre></pre><pre></pre><pre></pre>
+
+
+
+
+
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="card1" style="width:320px; margin-left:-30px; border:solid black; border-radius:9px;">
+  <img style="height:170px; width:170px; margin-left:50px; margin-top:10px;" src="combo1.webp" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Face Serum combo</h5>
+    <p > DERMDOC Glowlixir set 10%  Face Serum (15ml)<hr>₹398</p>
+    <button class="btn btn-primary add-to-cart" data-name="Face Serum combo" data-price="398">Add to Cart</button>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <div class="card2" style="width:300px; margin-left:400px; height:580px; margin-top: -585px; border:solid black; border-radius:10px;">
+  <img style="height:170px; width:150px; margin-left:50px; margin-top:10px;" src="combo2.webp" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Hair Serum combo</h5>
+    <p class="card-text">  Keshpallav Hair Oil and Scalptone Hair Growth Serum Super Saver Combo<hr>  ₹1,050</p>
+    <button class="btn btn-primary add-to-cart" data-name="Hair Serum combo" data-price="1,050">Add to Cart</button>
+  </div>
+
+  <div class="card3" style="width:300px; height:575px; margin-left:350px; margin-top: -585px; border:solid black; border-radius:10px;">
+  <img style="height:200px; width:150px; margin-left:50px; margin-top:10px;" src="combo3.webp" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Body wash combo</h5>
+    <p class="card-text">  Khadi Natural Herbal Turmeric Body Wash Combo Pack of 2 <hr> ₹550</p>
+    <button class="btn btn-primary add-to-cart" data-name="Body wash combo" data-price="550">Add to Cart</button>
+  </div>
+
+  <div class="card4" style="width:300px; margin-left:340px; height:570px; margin-top: -575px; border:solid black; border-radius:10px;">
+  <img style="height:150px; width:150px; margin-left:50px;" src="combo4.webp" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Face wash combo</h5>
+    <p class="card-text">  wash Combo of Green Tea Face Wash- 100ml & Vitamin C Face Serum-30ml<hr> ₹780 </p>
+    <button class="btn btn-primary add-to-cart" data-name="Face wash combo" data-price="780">Add to Cart</button>
+  </div>
+
+</div>
+    </div>
+  </div>
+</div>
+
+    <!-- Cart Offcanvas -->
+
+<div  class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas">
+  <div class="offcanvas-header">
+    <h5>🛒 Your Cart</h5>
+    <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body" id="cart-items">
+    <p class="text-muted">Your cart is empty.</p>
+  </div>
+  <div class="offcanvas-footer p-3 border-top">
+    <h5 id="total-price" class="text-center mb-3">Total: $0.00</h5>
+    <button class="btn btn-success w-100" id="checkout-btn">Order Now</button>
+  </div>
+</div>
+
+
+
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="card1" style="width:320px; margin-left:-30px; border:solid black; border-radius:9px;">
+  <img style="height:170px; width:170px; margin-left:50px; margin-top:10px;" src="combo1.webp" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Face Serum combo</h5>
+    <p > DERMDOC Glowlixir set 10%  Face Serum (15ml)<hr>₹398</p>
+    <button class="btn btn-primary add-to-cart" data-name="Face Serum combo" data-price="398">Add to Cart</button>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <div class="card2" style="width:300px; margin-left:400px; height:580px; margin-top: -585px; border:solid black; border-radius:10px;">
+  <img style="height:170px; width:150px; margin-left:50px; margin-top:10px;" src="combo2.webp" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Hair Serum combo</h5>
+    <p class="card-text">  Keshpallav Hair Oil and Scalptone Hair Growth Serum Super Saver Combo<hr>  ₹1,050</p>
+    <button class="btn btn-primary add-to-cart" data-name="Hair Serum combo" data-price="1,050">Add to Cart</button>
+  </div>
+
+  <div class="card3" style="width:300px; height:575px; margin-left:350px; margin-top: -585px; border:solid black; border-radius:10px;">
+  <img style="height:200px; width:150px; margin-left:50px; margin-top:10px;" src="combo3.webp" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Body wash combo</h5>
+    <p class="card-text">  Khadi Natural Herbal Turmeric Body Wash Combo Pack of 2 <hr> ₹550</p>
+    <button class="btn btn-primary add-to-cart" data-name="Body wash combo" data-price="550">Add to Cart</button>
+  </div>
+
+  <div class="card4" style="width:300px; margin-left:340px; height:570px; margin-top: -575px; border:solid black; border-radius:10px;">
+  <img style="height:150px; width:150px; margin-left:50px;" src="combo4.webp" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Face wash combo</h5>
+    <p class="card-text">  wash Combo of Green Tea Face Wash- 100ml & Vitamin C Face Serum-30ml<hr> ₹780 </p>
+    <button class="btn btn-primary add-to-cart" data-name="Face wash combo" data-price="780">Add to Cart</button>
+  </div>
+
+</div>
+    </div>
+  </div>
+</div>
+
+
+
+
+Here's a simple Bootstrap implementation based on the newsletter signup UI from the provided image:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter Signup</title>
+  <!-- Bootstrap CSS -->
+  <link href="https:                                                                                    
+  <style>
+    body {
+      background-color:         
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h5 class="text-center text-muted">SIGN UP FOR OUR NEWSLETTER</h5>
+        <form>
+          <div class="input-group mb-3">
+            <input type="email" class="form-control" placeholder="Enter Your Email Address" aria-label="Email address">
+            <button class="btn btn-danger" type="submit">SUBMIT</button>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" checked>
+            <label class="form-check-label text-muted">
+              I agree to receive marketing Newsletter and information about our products, events and offers.
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+This code creates a responsive newsletter signup form with Bootstrap styling, matching the layout and design of the provided image.
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href=""></a>                  
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <img class="dp" style="width:80px; border-radius:50%; margin-left:-20px;" src="girlls.jpeg" alt="">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <a class="navbar-brand" href="#">𝓓𝓮𝓮 𝓝𝓪𝓽𝓾𝓻𝓪𝓵</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:5500/boostrap/boost1.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Hair
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="http://127.0.0.1:5500/boostrap/hair.html">Shampoo & Conditioner</a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:5500/boostrap/oil.html">Oil & Mask</a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:5500/boostrap/hairs.html">Hair serum</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Face
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="http://127.0.0.1:5500/boostrap/facew.html">Aloe vera gel</a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:5500/boostrap/milk.html">Milk powder serum</a></li>
+            
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Body
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="http://127.0.0.1:5500/boostrap/soap.html">Soap & body wash</a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:5500/boostrap/foot.html">Foot cream</a></li>
+            
+          </ul>
+        </li>
+         
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            combos
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="http://127.0.0.1:5500/boostrap/facec.html">Face care combo</a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:5500/boostrap/hairc.html">Hair care combo</a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:5500/boostrap/bodyc.html">Body care combo</a></li>
+          </ul>
+        </li>
+
+
+        
+        <li class="nav-item">
+          <a class="nav-link " href="http://127.0.0.1:5500/boostrap/aboutus.html">Aboutus</a>
+        </li>
+      </ul>
+      
+      <button class="btn btn-outline-primary position-relative" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+    🛒 Cart
+    <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+  </button>
+    </div>
+  </div>
+</nav>

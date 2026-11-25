@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="boost1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="body">
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href=""></a>                  
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <img class="dp" style="width:80px; border-radius:50%; margin-left:-20px;" src="girlls.jpeg" alt="">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <a class="navbar-brand" href="#">𝓓𝓮𝓮 𝓝𝓪𝓽𝓾𝓻𝓪𝓵</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:5500/boostrap/boost1.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Hair
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="http://127.0.0.1:5500/boostrap/hair.html">Shampoo & Conditioner</a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:5500/boostrap/oil.html">Oil & Mask</a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:5500/boostrap/hairs.html">Hair serum</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Face
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="http://127.0.0.1:5500/boostrap/facew.html">Aloe vera gel</a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:5500/boostrap/milk.html">Milk powder serum</a></li>
+            
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Body
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="http://127.0.0.1:5500/boostrap/soap.html">Soap & body wash</a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:5500/boostrap/foot.html">Foot cream</a></li>
+            
+          </ul>
+        </li>
+         
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            combos
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="http://127.0.0.1:5500/boostrap/facec.html">Face care combo</a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:5500/boostrap/hairc.html">Hair care combo</a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:5500/boostrap/bodyc.html">Body care combo</a></li>
+          </ul>
+        </li>
+
+
+        
+        <li class="nav-item">
+          <a class="nav-link " href="http://127.0.0.1:5500/boostrap/aboutus.html">Aboutus</a>
+        </li>
+      </ul>
+      
+      <button class="btn btn-outline-primary position-relative" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+    🛒 Cart
+    <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+  </button>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<!--caroasels-->
+
+<div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="serum.webp" class="d-block w-100" height="600" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="hair">𝐇𝐀𝐈𝐑 𝐒𝐄𝐑𝐔𝐌</h5>
+        <p class="hairr">𝙾𝚁𝙶𝙰𝙽𝙸𝙲 𝙲𝙾𝚂𝙼𝙴𝚃𝙸𝙲𝚂</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="face .jpg" class="d-block w-100" height="600" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="face">FACE WASH</h5>
+        <div class="facee">
+        <p style="font-size: small;"> LOOK BEAUTIYFUL  <br> GLOW NATURALLY FOR THOSE LAST  <br> MINUTEE FESTIVE PLANS
+
+</p></div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="bodyw.jpg" class="d-block w-100" height="600" alt="...">
+      <div class="carousel-caption d-none  d-md-block ">
+        <h5 class="bodyw">BODY WASH</h5>
+        <p class="a">BETTER THAN REGULAR SOAP
+         MADE TO KEEP DELICATE <br> SKIN MOISTURIZED</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+  
+
+  <marquee class="marquee" style="color: rgb(63, 192, 63); margin-top:30px; position: relative; font-size:25px;" behavior="scroll" direction="left to right" scrollamount="10">𝙷𝚒𝚐𝚑 𝚙𝚎𝚛𝚏𝚘𝚛𝚖𝚊𝚗𝚌𝚎 𝚏𝚘𝚛𝚖𝚞𝚕𝚊𝚝𝚒𝚘𝚗 &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; 𝚂𝚊𝚏𝚎 & 𝚂𝚞𝚜𝚝𝚊𝚒𝚗𝚊𝚋𝚕𝚎 &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  𝙼𝚒𝚕𝚔 𝚙𝚘𝚠𝚍𝚎𝚛  &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  𝙵𝚘𝚛 𝚝𝚑𝚎 𝚛𝚎𝚊𝚕 𝚢𝚘𝚞  &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  𝙷𝚒𝚐𝚑 𝚙𝚎𝚛𝚏𝚘𝚛𝚖𝚊𝚗𝚌𝚎 𝚏𝚘𝚛𝚖𝚞𝚕𝚊𝚝𝚒𝚘𝚗 &nbsp; &nbsp;&nbsp; &nbsp; 𝙼𝚒𝚕𝚔 𝚙𝚘𝚠𝚍𝚎𝚛  &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  𝙵𝚘𝚛 𝚝𝚑𝚎 𝚛𝚎𝚊𝚕 𝚢𝚘𝚞 &nbsp;&nbsp;&nbsp;&nbsp;𝙷𝚒𝚐𝚑 𝚙𝚎𝚛𝚏𝚘𝚛𝚖𝚊𝚗𝚌𝚎 𝚏𝚘𝚛𝚖𝚞𝚕𝚊𝚝𝚒𝚘𝚗 &nbsp;&nbsp;&nbsp; 𝚂𝚊𝚏𝚎 & 𝚂𝚞𝚜𝚝𝚊𝚒𝚗𝚊𝚋𝚕𝚎 &nbsp;&nbsp;&nbsp; 𝙼𝚒𝚕𝚔 𝚙𝚘𝚎𝚠𝚎𝚛𝚍 &nbsp;&nbsp;&nbsp;𝙵𝚘𝚛 𝚝𝚑𝚎 𝚛𝚎𝚊𝚕 𝚢𝚘𝚞   </marquee>
+
+</ul>
+ <div class="card-container">
+  <div class="card blue">
+    <a href="http://127.0.0.1:5500/boostrap/hair.html">
+    <img src="serums.jpg" alt="Products">
+    </a>
+    <img style="width: 130px; margin-top: -130px; border-radius:50%; margin-left:-190px; height:120px;" src="small.jpeg" alt=""></a>
+    <span style="margin-top:-100px; margin-left:100px; font-size:30px;">Products <br> Under 499</span>
+  </div>
+  <div class="card purple">
+    <a href="http://127.0.0.1:5500/boostrap/soap.html">
+    <img  src="serumss.jpeg" alt="Offer"></a>
+        <img style="width: 130px; margin-top: -130px; border-radius:50%; margin-left:-190px; height:120px;" src="off.png" alt="">
+    <span style="margin-top:-100px; margin-left:180px; font-size:30px;">Flat 40% Offer</span>
+  </div>
+  <div class="card green">
+     <a href="http://127.0.0.1:5500/boostrap/seruml.html">
+    <img src="serumsss.jpeg" alt="Gen Z Favourites">
+    </a>
+        <img style="width: 130px; margin-top: -130px; border-radius:50%; margin-left:-190px; height:120px;" src="se.webp" alt="">
+    <span style="margin-top:-100px; margin-left:100px; font-size:30px;">Gen Z <br> Favourites</span>
+  </div>
+  <div class="card orange">
+    <a href="http://127.0.0.1:5500/boostrap/combo.html">
+  <img src="serumssss.jpeg" alt="Combos">
+  </a>
+        <img style="width: 130px; margin-top: -130px; border-radius:50%; margin-left:-190px; height:120px;" src="com.png" alt="">
+    <span style="margin-top:-100px; margin-left:100px; font-size:30px;">Combos <br> Under 999</span>
+  </div>
+</div><pre></pre><pre></pre>
+
+
+
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="card1" style="width:300px; margin-left:-30px; border:dashed black; border-radius:9px;">
+  <img style="height:200px;" src="shapping.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">𝗡𝗶𝗮𝗰𝗶𝗻𝗮𝗺𝗶𝗱𝗲 𝗦𝗲𝗿𝘂𝗺</h5>
+    <p style="font-size: small;" > The Derma co. nocolor 10% niacinamide serum <hr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹161</p>
+    <button style="box-shadow:10px 10px 20px rgba(0,0,0,.2); margin-left:25px; "  class="btn btn-outline-primary add-to-cart" data-name="𝗡𝗶𝗮𝗰𝗶𝗻𝗮𝗺𝗶𝗱𝗲 𝗦𝗲𝗿𝘂𝗺" data-price="161">Add to Cart</button>
+  </div>
+</div> 
+      </div>
+    </div>
+
+    <div class="card2" style="width:300px; margin-left:380px; margin-top: -595px;  border:dashed black; border-radius:10px;">
+  <img style="height:200px;" src="ros.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">𝗥𝗼𝘀𝗲𝗺𝗮𝗿𝘆  𝗛𝗮𝗶𝗿 𝗦𝗲𝗿𝘂𝗺</h5>
+    <p class="card-text" style="font-size: small;"> Rosemary water for hair Hair Spray <br> (100 ml) <hr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ₹202</p>
+    <button style="box-shadow:10px 10px 20px rgba(0,0,0,.2); margin-left:40px;"  class="btn btn-outline-primary  add-to-cart" data-name="𝗥𝗼𝘀𝗲𝗺𝗮𝗿𝘆  𝗛𝗮𝗶𝗿 𝗦𝗲𝗿𝘂𝗺" data-price="202">Add to Cart</button>
+  </div>
+  </div>
+
+  <div class="card3" style="width:300px; height:590px; margin-left:740px; margin-top: -595px;  border:dashed black; border-radius:10px;">
+  <img style="height:200px;" src="bodywash.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">𝗦𝗮𝗻𝗱𝗮𝗹𝘄𝗼𝗼𝗱 𝗕𝗼𝗱𝘆 𝗪𝗮𝘀𝗵</h5>
+    <p class="card-text" style="font-size: small;"> Sandalwood & Honey Body Wash <br> (100ml) <hr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ₹199</p>
+    <button style="box-shadow:10px 10px 20px rgba(0,0,0,.2); margin-top:-10px; margin-left:45px; "  class="btn btn-outline-primary   add-to-cart" data-name="𝗦𝗮𝗻𝗱𝗮𝗹𝘄𝗼𝗼𝗱 𝗕𝗼𝗱𝘆 𝗪𝗮𝘀𝗵" data-price="199">Add to Cart</button>
+  </div>
+  </div>
+
+  <div class="card4" style="width:300px; margin-left:1090px; height:590px; margin-top: -595px;  border:dashed black; border-radius:10px;">
+  <img style="height:200px;" src="shampoo.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">𝗔𝗻𝘁𝗶 𝗛𝗮𝗶𝗿 𝗙𝗮𝗹𝗹 𝗦𝗵𝗮𝗺𝗽𝗼𝗼</h5>
+    <p class="card-text"> Anti Hair Fall Shampoo with  Hair Care <br> (100ml)<hr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ₹395</p>
+    <button style="box-shadow:10px 10px 20px rgba(0,0,0,.2); margin-top:-10px; margin-left:40px;"  class="btn btn-outline-primary  add-to-cart" data-name="𝗔𝗻𝘁𝗶 𝗛𝗮𝗶𝗿 𝗙𝗮𝗹𝗹 𝗦𝗵𝗮𝗺𝗽𝗼𝗼" data-price="395">Add to Cart</button>
+  </div>
+
+</div>
+    </div>
+  </div>
+</div>
+<pre></pre><pre></pre>
+<div class="container mt-4">
+  <div class="row">
+    <div class="card1" style="width:300px; margin-left:-30px;  border:dashed black; border-radius:9px;">
+  <img style="height:200px;" src="soap.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">𝗔𝗹𝗽𝘀 𝗘𝗻𝘀𝗲𝗺𝗯𝗹𝗲 𝗦𝗼𝗮𝗽</h5>
+    <p style="font-size: small;" >The Alps Ensemble Nature's Herb Bathing Soap  <hr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹161</p>
+    <button style="box-shadow:10px 10px 20px rgba(0,0,0,.2); margin-left:30px;"  class="btn btn-outline-primary  add-to-cart" data-name="𝗔𝗹𝗽𝘀 𝗘𝗻𝘀𝗲𝗺𝗯𝗹𝗲 𝗦𝗼𝗮𝗽" data-price="161">Add to Cart</button>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <div class="card2" style="width:300px; margin-left:380px; margin-top: -595px;  border:dashed black; border-radius:10px;">
+  <img style="height:190px;" src="conditioner.webp" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">𝗞𝗵𝗮𝗱𝗶 𝗡𝗮𝘁𝘂𝗿𝗮𝗹 𝗔𝗺𝗹𝗮 </h5>
+    <p class="card-text" style="font-size: small;"> Khadi Natural Amla &  Conditioner <br> 210ml <hr> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹240</p>
+    <button style="box-shadow:10px 10px 20px rgba(0,0,0,.2); margin-left:45px;"  class="btn btn-outline-primary add-to-cart" data-name="𝗞𝗵𝗮𝗱𝗶 𝗡𝗮𝘁𝘂𝗿𝗮𝗹 𝗔𝗺𝗹𝗮" data-price="240">Add to Cart</button>
+  </div>
+  </div>
+
+  <div class="card3" style="width:300px; height:590px; margin-left:740px; margin-top: -585px;  border:dashed black; border-radius:10px;">
+  <img style="height:200px;" src="oil.webp" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">𝗡𝗮𝘁 𝗛𝗮𝗯𝗶𝘁  <br>𝗛𝗮𝗶𝗿 𝗢𝗶𝗹</h5>
+    <p class="card-text" style="font-size: small;">Nat Habit Men's Revital Summer Hair Oil <br> 210ml <hr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ₹200</p>
+    <button style="box-shadow:10px 10px 20px rgba(0,0,0,.2); margin-top:-5px; margin-left:45px; "  class="btn btn-outline-primary add-to-cart" data-name="𝗡𝗮𝘁 𝗛𝗮𝗯𝗶𝘁 𝗛𝗮𝗶𝗿 𝗢𝗶𝗹" data-price="200">Add to Cart</button>
+  </div>
+  </div>
+
+  <div class="card4" style="width:300px; margin-left:1090px; height:600px; margin-top: -600px;  border:dashed black; border-radius:10px;">
+  <img style="height:200px; width:150px; margin-left:50px;" src="wash.webp" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">𝗡𝗮𝘁 𝗛𝗮𝗯𝗶𝘁</h5>
+    <p class="card-text" style="font-size: small;">Nat Habit Fresh Skin Brightening <br> Ubtan Face Wash and more<hr> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹395</p>
+    <button style="box-shadow:10px 10px 20px rgba(0,0,0,.2); margin-left:50px; margin-top:10px;" class="btn btn-outline-primary add-to-cart" data-name="𝗡𝗮𝘁 𝗛𝗮𝗯𝗶𝘁" data-price="395">Add to Cart</button>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Cart Offcanvas -->
+
+<div  class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas">
+  <div class="offcanvas-header">
+    <h5>🛒 Your Cart</h5>
+    <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body" id="cart-items">
+    <p class="text-muted">Your cart is empty.</p>
+  </div>
+  <div class="offcanvas-footer p-3 border-top">
+    <h5 id="total-price" class="text-center mb-3">Total: ₹0.00</h5>
+    <button class="btn btn-success w-100" id="checkout-btn">Order Now</button>
+  </div>
+</div>
+<!-- Order Placed Modal -->
+<div class="modal fade" id="orderPlacedModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+      <h4 class="text-success">✅ Order Placed!</h4>
+      <p>Thank you for your purchase.</p>
+      <button class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+let cart = [];
+
+document.querySelectorAll('.add-to-cart').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const name = btn.dataset.name;
+    const price = parseFloat(btn.dataset.price);
+    const item = cart.find(p => p.name === name);
+    if (item) item.qty++;
+    else cart.push({ name, price, qty: 1 });
+    updateCart();
+  });
+});
+
+function updateCart() {
+  const items = document.getElementById('cart-items');
+  const count = document.getElementById('cart-count');
+  const total = document.getElementById('total-price');
+  count.textContent = cart.reduce((a, i) => a + i.qty, 0);
+
+  if (!cart.length) {
+    items.innerHTML = '<p class="text-muted">Your cart is empty.</p>';
+    total.textContent = 'Total: $0.00';
+    return;
+  }
+
+  let totalAmt = 0;
+  items.innerHTML = cart.map(i => {
+    totalAmt += i.price * i.qty;
+    return `
+      <div class="card mb-2 shadow-sm">
+        <div class="card-body d-flex justify-content-between align-items-center">
+          <div>
+            <h6>${i.name}</h6>
+            <small>₹${i.price.toFixed(2)} × ${i.qty}</small>
+          </div>
+          <div class="btn-group btn-group-sm">
+            <button class="btn btn-outline-secondary" onclick="changeQty('${i.name}', -1)">-</button>
+            <button class="btn btn-outline-secondary" disabled>${i.qty}</button>
+            <button class="btn btn-outline-secondary" onclick="changeQty('${i.name}', 1)">+</button>
+          </div>
+        </div>
+      </div>`;
+  }).join('');
+  total.textContent = `Total: ₹${totalAmt.toFixed(2)}`;
+}
+
+function changeQty(name, delta) {
+  const item = cart.find(p => p.name === name);
+  if (!item) return;
+  item.qty += delta;
+  if (item.qty <= 0) cart = cart.filter(p => p.name !== name);
+  updateCart();
+}
+
+document.getElementById('checkout-btn').addEventListener('click', () => {
+  if (!cart.length) return;
+  cart = [];
+  updateCart();
+  const modal = new bootstrap.Modal(document.getElementById('orderPlacedModal'));
+  modal.show();
+});
+</script>
+
+<!--cards-->
+
+<pre></pre><pre></pre><pre></pre><pre></pre><pre></pre>
+
+
+
+<!--circle-->
+
+<div class="container">
+  <div class="row">
+    <div style="width:200px;  margin-left:80px;" class="col-md-2 text-center">
+      <a href="http://127.0.0.1:5500/boostrap/seruml.html">
+      <img c style="width:150px; box-shadow:20px;" src="new.jpeg" class="rounded-circle" alt="New Launches"></a>
+      <p style="font-size: small;">New Launches</p>
+    </div>
+    
+    <div style="margin-left:10px;" class="col-md-2 text-center">
+      <a href="http://127.0.0.1:5500/boostrap/hair.html">
+      <img style="width:150px; height:150px;"  src="moo.webp" class="rounded-circle" alt="Shampoos"></a>
+      <p style="font-size: small;">Shampoos</p>
+    </div>
+    <div class="col-md-2 text-center">
+      <a href="http://127.0.0.1:5500/boostrap/seruml.html">
+      <img style="width:150px; height:150px; " src="mod.webp" class="rounded-circle" alt="Serums"></a>
+      <p style="font-size: small;">Serums</p>
+    </div>
+    
+    <div class="col-md-2 text-center">
+      <a href="http://127.0.0.1:5500/boostrap/mask.html">
+      <img style="width:150px; height:150px;" src="masks.png" class="rounded-circle" alt="Face Masks"></a>
+      <p style="font-size: small;">Face Masks</p>
+    </div>
+    <div class="col-md-2 text-center">
+      <a href="http://127.0.0.1:5500/boostrap/moi.html">
+      <img style="width:150px; height:150px;" src="mois.jpeg" class="rounded-circle" alt="Moisturisers"></a>
+      <p style="font-size: small;">Moisturisers</p>
+    </div>
+  </div>
+</div><pre><pre></pre></pre><pre></pre>
+
+<!--cardd-->
+<div class="container mt-4">
+  <div class="row">
+    <div class="card1" style="width:300px; margin-left:-30px;border:dashed black; border-radius:9px;">
+  <img style="height:200px; width:180px; margin-left:50px;" src="combo1.webp" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">𝗗𝗲𝗿𝗺𝗱𝗼𝗰 𝗙𝗮𝗰𝗲 𝘀𝗲𝗿𝘂𝗺
+</h5>
+    <p  style="font-size: small;">DERMDOC Glowlixir set 10%  Face Serum (15ml)<hr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹398</p>
+    <button style="box-shadow:10px 10px 20px rgba(0,0,0,.2); margin-left:30px; "  class="btn btn-outline-primary   add-to-cart" data-name="𝗗𝗲𝗿𝗺𝗱𝗼𝗰 𝗙𝗮𝗰𝗲 𝘀𝗲𝗿𝘂𝗺" data-price="161">Add to Cart</button>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <div class="card2" style="width:300px; height:600px; margin-left:380px; margin-top: -605px; border:dashed black; border-radius:10px;">
+  <img style="height:170px; width:180px; margin-left:50px; margin-top:10px;" src="combo2.webp" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">𝗞𝗲𝘀𝗵𝗽𝗮𝗹𝗹𝗮𝘃 𝗛𝗮𝗶𝗿 𝗦𝗲𝗿𝗮𝗺</h5>
+    <p class="card-text" style="font-size: small;"> Keshpallav Hair Oil and Scalptone Hair Growth Serum Saver Combo<hr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ₹1,050</p>
+    <button style="box-shadow:10px 10px 20px rgba(0,0,0,.2); margin-left:40px; margin-top:10px; "  class="btn btn-outline-primary    add-to-cart" data-name="𝗞𝗲𝘀𝗵𝗽𝗮𝗹𝗹𝗮𝘃 𝗛𝗮𝗶𝗿 𝗦𝗲𝗿𝗮𝗺" data-price="202">Add to Cart</button>
+  </div>
+  </div>
+  
+
+  <div class="card3" style="width:300px; height:600px; margin-left:730px; margin-top: -595px; border:dashed black; border-radius:10px;">
+  <img style="height:200px; width:170px; margin-left:70px; margin-top:20px;" src="combo3.webp" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">𝗛𝗲𝗿𝗯𝗮𝗹 𝗧𝘂𝗿𝗺𝗲𝗿𝗶𝗰 𝗯𝗼𝗱𝘆 𝘄𝗮𝘀𝗵</h5>
+    <p class="card-text" style="font-size: small;"> Khadi Natural Herbal Turmeric Combo Pack<hr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ₹550</p>
+    <button style="box-shadow:10px 10px 20px rgba(0,0,0,.2); margin-left:35px;"  class="btn btn-outline-primary   add-to-cart" data-name="𝗛𝗲𝗿𝗯𝗮𝗹 𝗧𝘂𝗿𝗺𝗲𝗿𝗶𝗰 𝗯𝗼𝗱𝘆 𝘄𝗮𝘀𝗵" data-price="199">Add to Cart</button>
+  </div>
+  </div>
+
+  <div class="card4" style="width:300px; margin-left:1080px; height:600px; margin-top: -595px;border:dashed black; border-radius:10px;">
+  <img style="height:200px; margin-top:10px; width:170px; margin-left:50px;" src="combo4.webp" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Face wash combo</h5>
+    <p class="card-text" style="font-size: small;"> wash Combo of Green Tea Face Wash- 100ml & Vitamin C 30ml<hr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ₹780 </p>
+    <button style="box-shadow:10px 10px 20px rgba(0,0,0,.2); margin-left:45px; margin-top:10px;"  class="btn btn-outline-primary   add-to-cart" data-name="Face wash combo" data-price="395">Add to Cart</button>
+  </div>
+
+</div>
+    </div>
+  </div>
+</div>
+
+<!-- Cart Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas">
+  <div class="offcanvas-header">
+    <h5>🛒 Your Cart</h5>
+    <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body" id="cart-items">
+    <p class="text-muted">Your cart is empty.</p>
+  </div>
+  <div class="offcanvas-footer p-3 border-top">
+    <h5 id="total-price" class="text-center mb-3">Total: ₹0.00</h5>
+    <button class="btn btn-success w-100" id="checkout-btn">Order Now</button>
+  </div>
+</div>
+
+<!-- Order Placed Modal -->
+<div class="modal fade" id="orderPlacedModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+      <h4 class="text-success">✅ Order Placed!</h4>
+      <p>Thank you for your purchase.</p>
+      <button class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+let  = [];
+
+document.querySelectorAll('.add-to-cart').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const name = btn.dataset.name;
+    const price = parseFloat(btn.dataset.price);
+    const item = cart.find(p => p.name === name);
+    if (item) item.qty++;
+    else cart.push({ name, price, qty: 1 });
+    updateCart();
+  });
+});
+
+function updateCart() {
+  const items = document.getElementById('cart-items');
+  const count = document.getElementById('cart-count');
+  const total = document.getElementById('total-price');
+  count.textContent = cart.reduce((a, i) => a + i.qty, 0);
+
+  if (!cart.length) {
+    items.innerHTML = '<p class="text-muted">Your cart is empty.</p>';
+    total.textContent = 'Total: ₹0.00';
+    return;
+  }
+
+  let totalAmt = 0;
+  items.innerHTML = cart.map(i => {
+    totalAmt += i.price * i.qty;
+    return `
+      <div class="card mb-2 shadow-sm">
+        <div class="card-body d-flex justify-content-between align-items-center">
+          <div>
+            <h6>${i.name}</h6>
+            <small>₹${i.price.toFixed(2)} × ${i.qty}</small>
+          </div>
+          <div class="btn-group btn-group-sm">
+            <button class="btn btn-outline-secondary" onclick="changeQty('${i.name}', -1)">-</button>
+            <button class="btn btn-outline-secondary" disabled>${i.qty}</button>
+            <button class="btn btn-outline-secondary" onclick="changeQty('${i.name}', 1)">+</button>
+          </div>
+        </div>
+      </div>`;
+  }).join('');
+  total.textContent = `Total: ₹${totalAmt.toFixed(2)}`;
+}
+
+function changeQty(name, delta) {
+  const item = cart.find(p => p.name === name);
+  if (!item) return;
+  item.qty += delta;
+  if (item.qty <= 0) cart = cart.filter(p => p.name !== name);
+  updateCart();
+}
+
+document.getElementById('checkout-btn').addEventListener('click', () => {
+  if (!cart.length) return;
+  cart = [];
+  updateCart();
+  const modal = new bootstrap.Modal(document.getElementById('orderPlacedModal'));
+  modal.show();
+});
+</script>
+
+<!--footer-->
+
+
+<footer class=" text-white p-4 text-center" style="margin-top:100px; height:530px; margin-left:0px; background-color:gray; overflow-y: hidden; ">
+  <div class="container">
+    <div class="row">
+      <!-- WHO WE ARE Section -->
+      <div class="col-md-4">
+        <h5 class="text-uppercase">WHO WE ARE</h5>
+        <p class="small">
+          "Nature Beauty brings you all-natural skincare crafted from the purest ingredients like neem, papaya, rose, castor, apricot and others. Our eco-friendly, cruelty-free products nourish, protect, and rejuvenate, promoting healthy, radiant skin for all ages."
+        </p>
+      </div>
+
+      <!-- Top Categories Section -->
+      <div class="col-md-4">
+        <h5 class="text-uppercase" style="font-size:25px; margin-left:40px;">Top Categories</h5>
+        <ul class="list-unstyled small">
+                                                                     
+           <a href="http://127.0.0.1:5500/boostrap/seruml.html" style="color: white; text-decoration: none;"><p  style="font-family: serif; margin-left: 110px;">Face serum</p></a>
+    <a href="http://127.0.0.1:5500/boostrap/hair.html" style="color: white; text-decoration: none;"><p  style="font-family: serif; margin-left: 110px;">Hair serum</p></a>
+    <a href="http://127.0.0.1:5500/boostrap/soap.html" style="color: white; text-decoration: none;"><p  style="font-family: serif; margin-left: 110px;">Bodywash</p></a>
+    <a href="http://127.0.0.1:5500/boostrap/facew.html" style="color: white; text-decoration: none;"><p  style="font-family: serif; margin-left: 110px;">Face wash</p></a>
+    <a href="http://127.0.0.1:5500/boostrap/hair.html" style="color: white; text-decoration: none;"><p  style="font-family: serif; margin-left:100px;">Shampoo</p></a>
+        </ul>
+      </div>
+
+      <!-- Contact Us Section -->
+      <div class="col-md-4">
+        <h5 class="text-uppercase">Contact Us</h5>
+        <ul class="list-unstyled small">
+          <li><a href=" "></a></li>                                                                   
+          <li><a href="#" class="text-white text-decoration-none">Terms & Conditions</a></li>
+          <li><a href=""></a></li>                                                              
+          <li>Email: <a href="mailto:dpproducts@gmail.com" class="text-white text-decoration-none">dpproducts@gmail.com</a></li>
+          <li>Phone No: <a href="tel:7723185540" class="text-white text-decoration-none">7723185540</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="container-fluid bg-dark text-white p-3" style="margin-top: 0px; height:280px;">
+  <div class="row align-items-center">
+    <!-- Get special discount section -->
+    <div class="col-md-4">
+      <h6><i class="bi bi-envelope"></i>ꜱʜᴏᴡ ᴜꜱ ꜱᴏᴍᴇ ʟᴏᴠᴇ ❤ ᴏɴ ꜱᴏᴄɪᴀʟ ᴍᴇᴅɪᴀ</h6>
+      <div class="input-group mb-2">
+    <li class="d-inline-block me-3" style="margin-left:120px;">
+      <a href="http://127.0.0.1:5500/boostrap/facebook.html" class="text-white">
+        <i class="fab fa-facebook-f" ></i>
+      </a>
+    </li>
+    <li class="d-inline-block me-3">
+      <a href="https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dtwitter%2520login" class="text-white">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li class="d-inline-block">
+      <a href="http://127.0.0.1:5500/boostrap/insta.html" class="text-white">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </li>
+    
+  </div>  
+        
+      </div>
+     
+    </div>
+
+    <!-- Experience the mobile app section -->
+
+  <h5 class="text-center " style="font-size: small; margin-top:-80px; color:white;">𝗦𝗜𝗚𝗡 𝗨𝗣 𝗙𝗢𝗥 𝗢𝗨𝗥 𝗡𝗘𝗪𝗦𝗟𝗘𝗧𝗧𝗘𝗥</h5>
+        <form>
+          <div class="input-group mb-3" style="width:400px; margin-left:500px;">
+            <input style="font-size: small;" type="email" class="form-control" placeholder="Enter Your Email Address" aria-label="Email address">
+            <button class="btn btn-danger" type="submit">SUBMIT</button>
+          </div>
+          <div class="form-check" style="margin-left:500px;">
+            <input class="form-check-input" type="checkbox" checked>
+            <label class="form-check-label text-muted" style="font-size:x-small;">
+              I agree to receive marketing Newsletter and information <br> about our products, events and offers.
+            </label>
+          </div>
+        </form>
+
+
+                                                                                
+  
+ 
+
+    <!-- Help section -->
+     <div>
+    <div class="col-me-3 text-end" style="margin-top:-180px; color: white;">
+      <h6><i class="bi bi-phone"></i> ꜰᴏʀ ᴀɴʏ ʜᴇʟᴘ, ʏᴏᴜ ᴍᴀʏ ᴄᴀʟʟ ᴜꜱ ᴀᴛ</h6>
+      <p class="aall">1800-267-4444</p>
+      <small>(All days, 8 AM to 10 PM)</small>
+    </div>
+  
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
